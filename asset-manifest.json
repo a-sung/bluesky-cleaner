@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/bluesky-post-cleaner/static/css/main.7f4386a3.css",
+    "main.js": "/bluesky-post-cleaner/static/js/main.0f338424.js",
+    "static/js/488.54275d71.chunk.js": "/bluesky-post-cleaner/static/js/488.54275d71.chunk.js",
+    "index.html": "/bluesky-post-cleaner/index.html",
+    "main.7f4386a3.css.map": "/bluesky-post-cleaner/static/css/main.7f4386a3.css.map",
+    "main.0f338424.js.map": "/bluesky-post-cleaner/static/js/main.0f338424.js.map",
+    "488.54275d71.chunk.js.map": "/bluesky-post-cleaner/static/js/488.54275d71.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7f4386a3.css",
+    "static/js/main.0f338424.js"
+  ]
+}
