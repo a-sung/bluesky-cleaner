@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { useState } from "react";
+import { AtpAgent } from '@atproto/api'
+import "./styles/App.css";
+import Header from "./components/Header";
+import Login from "./components/Login";
+import User from "./components/User";
+import Cleaner from "./pages/Cleaner";
+
+const a = new AtpAgent({
+  service: 'https://bsky.social'
+})
 
 function App() {
+  const [agent, setAgent] = useState(a);
+  const [user, setUser] = useState();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <div className="app-container">
+       {!user && <Login agent={agent} setUser={setUser} />}
+       {user && <User user={user} />}
+       <Cleaner agent={agent} user={user} />
+      </div>
     </div>
   );
 }

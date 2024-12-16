@@ -1,0 +1,27 @@
+.cleaner-container label {
+    margin-right: 20px;
+}
+
+.cleaner-card {
+    padding: 24px;
+    margin: 12px 0 ;
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.cleaner-card h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.cleaner-card h2 {
+    margin: 0;
+    padding: 0;
+    color: gray;
+    font-size: 1em;
+    font-weight: normal;
+}

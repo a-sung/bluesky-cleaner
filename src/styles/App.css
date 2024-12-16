@@ -1,0 +1,17 @@
+.app-container {
+    margin-top: 60px;
+    padding: 20px 60px;
+}
+
+.login-container {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    gap: 40px;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
