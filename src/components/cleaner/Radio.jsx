@@ -1,36 +1,29 @@
 function Radio({selectedOption, setSelectedOption}) {
-    const handleChangeOption = (event) => {
-      setSelectedOption(event.target.value); // 선택된 값을 업데이트
+
+    const handleChangeOption = (e) => {
+      setSelectedOption(e.target.value);
     };
+
+    const radios = [
+        {value: "all", label: "Delete all posts"},
+        {value: "selected", label: "Delete selected posts"},
+        {value: "repost", label: "Delete reposts"},
+        {value: "reply", label: "Delete Replies"},
+    ]
+
     return (
         <div>
-            <label>
+            {radios.map(radio => (
+                <label>
                 <input
                     type="radio"
-                    value="post"
-                    checked={selectedOption === "post"}
+                    value={radio.value}
+                    checked={selectedOption === radio.value}
                     onChange={handleChangeOption}
                 />
-                Delete All Posts
+                {radio.label}
             </label>
-            {/* <label>
-                <input
-                    type="radio"
-                    value="repost"
-                    checked={selectedOption === "repost"}
-                    onChange={handleChangeOption}
-                />
-                Delete Only Reposts
-            </label>
-            <label>
-                <input
-                    type="radio"
-                    value="reply"
-                    checked={selectedOption === "reply"}
-                    onChange={handleChangeOption}
-                />
-                Delete Only Replies
-            </label> */}
+            ))}
         </div>
     )
 }

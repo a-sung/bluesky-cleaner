@@ -1,6 +1,6 @@
 function User({user}) {
     return (
-      <div >
+      <div className="user-container">
        hello, {user?.handle}
       </div>
     );

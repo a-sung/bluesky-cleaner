@@ -66,47 +66,51 @@ function DeleteAllCard({agent, user}) {
         >
             <div>
                 <input 
+                    id="excludeReposts"
                     type="checkbox" 
                     value={excludeReposts} 
                     onChange={() => setExcludeReposts(!excludeReposts)}
                 />
-                <label>Exclude reposts</label>
+                <label htmlFor="excludeReposts">Exclude reposts</label>
             </div>
             <div>
                 <input
+                    id="excludeReplies"
                     type="checkbox" 
                     value={excludeReplies} 
                     onChange={() => setExcludeReplies(!excludeReplies)}
                 />
-                <label>Exclude replies</label>
+                <label htmlFor="excludeReplies">Exclude replies</label>
             </div>
             <div>
                 <input 
+                    id="excludeLiked"
                     type="checkbox" 
                     value={excludeLiked} 
                     onChange={() => setExcludeLiked(!excludeLiked)} 
                 />
-                <span>Exclude posts with more than </span>
+                <label htmlFor="excludeLiked">Exclude posts with more than </label>
                 <input 
                     type="number" 
                     value={likeCount} 
                     onChange={(e) => setLikeCount(e.target.value)} 
                 />
-                <span> likes</span>
+                <label htmlFor="excludeLiked"> likes</label>
             </div>
             <div>
                 <input 
+                    id="excludeReposted"
                     type="checkbox" 
                     value={excludeReposted} 
                     onChange={() => setExcludeReposted(!excludeLiked)} 
                 />
-                <span>Exclude posts with more than </span>
+                <label htmlFor="excludeReposted">Exclude posts with more than </label>
                 <input 
                     type="number" 
                     value={repostCount} 
                     onChange={(e) => setRepostCount(e.target.value)} 
                 />
-                <span> reposts</span>
+                <label htmlFor="excludeReposted"> reposts</label>
             </div>
         </Card>
     )
